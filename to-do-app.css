@@ -166,10 +166,15 @@ box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) ;
   
 }
 .todoItem{
-  margin: 4px;
-  width: 96%;
-  border-radius: 5px;
-  border:1px solid grey;
+  
+height: 100px;
+width: auto;
+padding: 15px;
+border: 1px solid rgba(0, 0, 0, 0.35); 
+margin-left: 10px;
+margin-right: 10px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+margin-bottom: 4px;
   
   
   padding: 5px;
@@ -258,13 +263,7 @@ cursor: pointer;
 }
 .listInline{ 
 
-
-height: 100px;
-width: auto;
-padding: 10px;
-border: 1px solid rgba(0, 0, 0, 0.35); 
-margin-left: 10px;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+}
 .inline-list{
   display: flex;
 flex-direction: row;
