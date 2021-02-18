@@ -1,4 +1,6 @@
-body {font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Arial, Helvetica, sans-serif;
+background-color: #708090;
+}
 
 /*Css Rules for Screen Sizes  from 600px an bellow*/
 @media only screen and (max-width: 600px) {
@@ -6,13 +8,22 @@ body {font-family: Arial, Helvetica, sans-serif;}
     background-color: lightblue;
   }
   .modal-content{
-    height: 100%;
     width: 100%;
   }
 
   .modal-content .noteTittle:focus{
     height: 30px;
   }
+
+  .todo-list{
+width: 100%;
+height: 500px;
+
+
+}
+.listInline{
+  height: auto;
+}
 }
 
 /*Normal CSS Rules for the Application*/
@@ -111,9 +122,10 @@ border-radius: 5px;
   margin:auto;
 }
 .todo-list{
-width: 400px;
-height: 450px;
+width: 60%;
+height: 500px;
 overflow-y: scroll;
+margin:auto; 
 background-color: #e6e5e5;
 
 }
@@ -209,6 +221,8 @@ background-color: red;
   font-size: 30px;
   font-weight: 200;
   color: darkgrey;
+  text-align: center;
+  border-bottom: 1px solid purple;
 }
 .date{
   margin: 3px;
@@ -244,10 +258,14 @@ cursor: pointer;
 .listInline{ 
 display: flex;
 flex-direction: row;
+background-color: grey;
+height: 100px;
+width: auto;
+padding: 10px;
+border: 1px solid rgba(0, 0, 0, 0.35); 
+margin-left: 10px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
 
-}
-
-}
 
 .listUnstyled{}
 
