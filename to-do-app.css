@@ -1,0 +1,282 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/*Css Rules for Screen Sizes  from 600px an bellow*/
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .modal-content{
+    height: 100%;
+    width: 100%;
+  }
+
+  .modal-content .noteTittle:focus{
+    height: 30px;
+  }
+}
+
+/*Normal CSS Rules for the Application*/
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.2); 
+}
+
+
+.modal-content {
+  background-color: rgba(128, 0, 255,0.4);
+  margin:auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  height: 70%;
+  border-radius: 10px;
+}
+.modal-content textarea{
+  width: 100%;
+  height: 40%;
+  border-radius: 10px;
+  border:none;
+  background-color: white;
+  font-size: 1.5rem;
+}
+.modal-content textarea:focus{
+  background-color: white;
+}
+.modal-content .noteTittle{
+  width: 100%;
+  border-radius: 10px; 
+  height: 30px;
+  background-color: whitesmoke;
+  border:none;
+  font-size: 2rem;
+  height: 50px;
+}
+.modal-content .noteTittle:focus{
+  height: 59px;
+  border:2px solid blue;
+  background-color: white;
+}
+.modal-content button{
+  border-radius: 5px;
+  border:none;
+  font-size: 1.5rem;
+  height: auto;
+  width: auto;
+  padding:12px;: 
+  
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.main-section{
+border:2px solid Black;
+margin: 4px;
+
+height: 300px;
+border-radius: 5px;
+}
+.main{
+  display: flex;
+  flex-direction: row;
+  margin:auto;
+  
+  border: 1px solid #888;
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+.display-pane{
+  width: 400px;
+  margin:auto;
+}
+.todo-list{
+width: 400px;
+height: 450px;
+overflow-y: scroll;
+background-color: #e6e5e5;
+
+}
+.noteDisplay{
+  border:none;
+  height: auto; 
+  width: 
+}
+.btn-1{
+  border:none;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgba(128, 0, 255,0.4);
+  color: white;
+}
+.btn-1:focus,.btn-1:hover{
+  background-color: #9900cc;
+  border-radius: 5px;
+  border:none;
+}
+.datePickers{
+  display: flex;
+}
+.datePickers input{
+  width: 200px;
+  height: 25px;
+  font-size: 1.5rem;
+  padding:8px;
+  margin: 2px;
+  border-radius: 5px;
+  border:none;
+  
+}
+.todoItem{
+  margin: 4px;
+  width: 96%;
+  border-radius: 5px;
+  border:1px solid grey;
+  
+  
+  padding: 5px;
+  background-color: white;
+}
+.todoItem h3{
+  font-weight:200:;
+}
+.todoItem:hover{
+cursor: pointer;
+opacity: 90%;
+}
+.listUnstyled{
+  list-style: none;
+}
+.inprogresItem{
+background-color: orange;
+}
+.completedItem{
+background-color: green;
+}
+.overdueItem{
+background-color: red;
+}
+
+
+
+.main::-webkit-scrollbar,.todo-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+.main::-webkit-scrollbar-track,.todo-list ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  width: 10px;
+}
+
+
+.main::-webkit-scrollbar-thumb,.todo-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+
+.main::-webkit-scrollbar-thumb:hover,.todo-list ::-webkit-scrollbar-thumb:hover{
+  background: #555;
+}
+
+.listHeaderText{
+  font-size: 30px;
+  font-weight: 200;
+  color: darkgrey;
+}
+.date{
+  margin: 3px;
+  border-radius: 2px;
+  border:1px solid grey;
+  font-weight: 100;
+  color: 
+}
+.aler-warning{
+  border-radius: 5px;
+  border:1px solid red;
+  background-color: pink;
+  color: red;
+  padding: 12px;
+  width: 80%; 
+  /*align-items: center;*/
+  margin: auto;
+  z-index: 1;
+}
+.colorItem{
+  height: 15px;
+  width: 15px;
+  border-radius: 25%;
+  border: 2px solid white;
+  margin: 10px;
+}
+.colorItem:hover{
+cursor: pointer;
+}
+.colorItem:active{
+  border: 2px solid black;
+}
+.listInline{ 
+display: flex;
+flex-direction: row;
+
+}
+
+}
+
+.listUnstyled{}
+
+/*Color Classes*/
+.MediumPurple{
+  background-color: #9370DB;
+}
+.PaleGoldenRod{
+  background-color: #EEE8AA;
+}
+.PaleVioletRed{
+  background-color: #DB7093;
+}
+
+.PaleGreen{
+  background-color: #98FB98;
+}
+.SeaGreen{
+  background-color: #2E8B57;
+}
+.SandyBrown{
+  background-color: #F4A460;
+}
+.SlateBlue{
+  background-color: #6A5ACD;
+}
+.SkyBlue{
+  background-color: #87CEEB;
+}
+.SpringGreen{
+  background-color: #00FF7F;
+}
