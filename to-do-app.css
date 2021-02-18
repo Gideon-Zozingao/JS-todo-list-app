@@ -84,7 +84,7 @@ margin: 0;
   font-size: 1.5rem;
   height: auto;
   width: auto;
-  padding:12px;: 
+  padding:12px; 
   
 }
 .close {
@@ -133,7 +133,7 @@ box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) ;
 .noteDisplay{
   border:none;
   height: auto; 
-  width: 
+  /* width:  */
 }
 .btn-1{
   border:none;
@@ -181,7 +181,7 @@ margin-bottom: 4px;
   background-color: white;
 }
 .todoItem h3{
-  font-weight:200:;
+  font-weight:200;
 }
 .todoItem:hover{
 cursor: pointer;
@@ -235,7 +235,7 @@ background-color: red;
   border-radius: 2px;
   border:1px solid grey;
   font-weight: 100;
-  color: 
+  color: yellow
 }
 .aler-warning{
   border-radius: 5px;
