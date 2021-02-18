@@ -77,15 +77,9 @@ let noteKey=new Date();
 let dB=window.localStorage;
 dB.setItem(noteKey,JSON.stringify(noteObj));
 
-//console.log(dB);
-
-// for (let i=0; i<=dB.length; i++) {
-// console.log([i]);
-
-// }
 Object.keys(dB).forEach((key)=>{
   console.log(dB.getItem(key));
-})
+});
 
   //   let todoItem=document.createElement("div");
   // todoItem.classList.add("todoItem");
