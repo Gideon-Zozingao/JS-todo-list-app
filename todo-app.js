@@ -78,7 +78,10 @@ let dB=window.localStorage;
 dB.setItem(noteKey,JSON.stringify(noteObj));
 
 Object.keys(dB).forEach((key)=>{
-  console.log(dB.getItem(key));
+  //console.log(dB.getItem(key));
+
+  let todoNotes=JSON.parse(dB.getItem(key));
+  console.log(todoNotes.title+", "+todoNotes. notBody);
 });
 
   //   let todoItem=document.createElement("div");
