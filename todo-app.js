@@ -30,15 +30,15 @@ let listItem=document.querySelector(".todo-list");
 let displayNote=document.querySelector(".noteDisplay");
 
 //  let colorItem=document.querySelectorAll(".color-list li");
-
+colorPicked="";
 // for (let i=0; i<=colorItem.length; i++) {
 // colorItem[i].onclick=function(){
 //   colorItem[i].style.boder= '1px solid black';
 //   let modalContent=document.querySelector(".modal-content");
-//   modalContent.classList.add(colorItem[i].classList[1]);
+//   colorPicked=modalContent.classList.add(colorItem[i].classList[1]);
 // };
 // }
-//console.log(noteCOlor);
+//alert()
 //
 // for (let i = 0;i<=listItems.length; i++) {
 //   listItems[i].onclick=function(){
