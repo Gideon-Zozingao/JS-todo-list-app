@@ -74,7 +74,6 @@ let noteObj={
 let noteKey=new Date();
 let dB=window.localStorage;
 dB.setItem(noteKey,JSON.stringify(noteObj));
-
 Object.keys(dB).forEach((key)=>{
   let todoNotes=JSON.parse(dB.getItem(key));
   console.log(todoNotes.title+", "+todoNotes. notBody);
