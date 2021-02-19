@@ -31,6 +31,7 @@ let listItem=document.querySelector(".todo-list");
 let displayNote=document.querySelector(".noteDisplay");
 
 // let colorItem=document.querySelectorAll(".listInline li");
+
 // for (let i=0; i<=colorItem.length; i++) {
 // colorItem[i].onclick=function(){
 //   colorItem[i].style.boder= '1px solid black';
@@ -47,14 +48,12 @@ let displayNote=document.querySelector(".noteDisplay");
 // }
 let addNote=document.querySelector("#addNote");
 addNote.onclick=()=>{
-
   let noteTitle=document.querySelector("#noteTittle").value;
   let startDate=document.querySelector("#startDate").value;
   let endDate=document.querySelector("#endDate").value;
   let todoNote=document.querySelector("#todoNote").value;
-  if (noteTitle==""||todoNote==""||startDate==""||endDate=="") {
+  if (noteTitle==""||todoNote==""||startDate==""||endDate==""){
     let modalHeader=document.querySelector(".modalHeaderText");
-
 let errMesage=document.createElement("span");
 errMesage.classList.add("aler-warning");
 errMesage.textContent=" You cannot Leave required fields Empty";
@@ -62,7 +61,6 @@ modalHeader.appendChild(errMesage);
 setTimeout(function(){
 errMesage.remove();
 },1500);
-
 //modalHeaderText
   } else {
 let noteObj={
@@ -78,11 +76,28 @@ let dB=window.localStorage;
 dB.setItem(noteKey,JSON.stringify(noteObj));
 
 Object.keys(dB).forEach((key)=>{
-  //console.log(dB.getItem(key));
-
   let todoNotes=JSON.parse(dB.getItem(key));
   console.log(todoNotes.title+", "+todoNotes. notBody);
+    let todoItem=document.createElement("div");
+  todoItem.classList.add("todoItem");
+  let newnoteTitle=document.createElement("h3");
+  newnoteTitle.textContent=todoNotes.title;
+  todoItem.appendChild(newnoteTitle);
+  let newStartDate=document.createElement("span");
+  newStartDate.classList.add("date");
+  newStartDate.textContent=todoNotes.sDate;
+   todoItem.appendChild(newStartDate);
+   let newEndDate=document.createElement("span");
+   newEndDate.classList.add("date");
+   newEndDate.textContent=todoNotes.endDate;
+   todoItem.appendChild(newEndDate);
+   let myNote=document.createElement("p");
+   myNote.textContent=todoNotes.notBody;
+   todoItem.appendChild(myNote);
+   let todoList=document.querySelector(".todo-list "); 
+   todoList.appendChild(todoItem);
 });
+}
 
   //   let todoItem=document.createElement("div");
   // todoItem.classList.add("todoItem");
@@ -104,16 +119,11 @@ Object.keys(dB).forEach((key)=>{
   //  noteDiv.appendChild(myNote);
   //  todoItem.appendChild(noteDiv);
   //  listItem.appendChild(todoItem);
-
-   
  document.querySelector("#noteTittle").value="";
 document.querySelector("#startDate").value="";
   document.querySelector("#endDate").value="";
   document.querySelector("#todoNote").value="";
 
-
-   
-
   }
   
-}
+
