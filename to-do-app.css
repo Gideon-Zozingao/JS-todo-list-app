@@ -167,7 +167,7 @@ box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) ;
 }
 .todoItem{
   
-height: 100px;
+height: auto;
 width: auto;
 padding: 15px;
 border: 1px solid rgba(0, 0, 0, 0.35); 

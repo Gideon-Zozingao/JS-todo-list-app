@@ -13,7 +13,6 @@ let spanOne = document.querySelectorAll('.close')[0];
 spanOne.onclick = () =>{
 
  document.querySelector("#noteTittle").value="";
-document.querySelector("#startDate").value="";
   document.querySelector("#endDate").value="";
   document.querySelector("#todoNote").value="";
   modal.style.display = "none";
@@ -49,10 +48,12 @@ let displayNote=document.querySelector(".noteDisplay");
 let addNote=document.querySelector("#addNote");
 addNote.onclick=()=>{
   let noteTitle=document.querySelector("#noteTittle").value;
-  let startDate=document.querySelector("#startDate").value;
+  
   let endDate=document.querySelector("#endDate").value;
+
   let todoNote=document.querySelector("#todoNote").value;
-  if (noteTitle==""||todoNote==""||startDate==""||endDate==""){
+
+  if (noteTitle==""||todoNote==""||endDate==""){
     let modalHeader=document.querySelector(".modalHeaderText");
 let errMesage=document.createElement("span");
 errMesage.classList.add("aler-warning");
@@ -65,30 +66,28 @@ errMesage.remove();
   } else {
 let noteObj={
   title:noteTitle,
-  sDate:startDate,
   eDate:endDate,
   notBody:todoNote,
-  noteColor:""
+  noteColor:"SpringGreen"
 
 }
 let noteKey=new Date();
 let dB=window.localStorage;
 dB.setItem(noteKey,JSON.stringify(noteObj));
+
 Object.keys(dB).forEach((key)=>{
   let todoNotes=JSON.parse(dB.getItem(key));
-  console.log(todoNotes.title+", "+todoNotes. notBody);
+  //console.log(todoNotes.title+", "+todoNotes. notBody);
+
     let todoItem=document.createElement("div");
-  todoItem.classList.add("todoItem");
+  todoItem.classList.add("todoItem",`${todoNotes.noteColor}`);
   let newnoteTitle=document.createElement("h3");
   newnoteTitle.textContent=todoNotes.title;
   todoItem.appendChild(newnoteTitle);
-  let newStartDate=document.createElement("span");
-  newStartDate.classList.add("date");
-  newStartDate.textContent=todoNotes.sDate;
-   todoItem.appendChild(newStartDate);
+  
    let newEndDate=document.createElement("span");
    newEndDate.classList.add("date");
-   newEndDate.textContent=todoNotes.endDate;
+   newEndDate.textContent=todoNotes.eDate;
    todoItem.appendChild(newEndDate);
    let myNote=document.createElement("p");
    myNote.textContent=todoNotes.notBody;
@@ -119,7 +118,7 @@ Object.keys(dB).forEach((key)=>{
   //  todoItem.appendChild(noteDiv);
   //  listItem.appendChild(todoItem);
  document.querySelector("#noteTittle").value="";
-document.querySelector("#startDate").value="";
+
   document.querySelector("#endDate").value="";
   document.querySelector("#todoNote").value="";
 
