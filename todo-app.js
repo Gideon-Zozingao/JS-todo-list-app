@@ -81,6 +81,27 @@ let noteKey=new Date();
 let dB=window.localStorage;
 //sends the Data Item in JSON  format to the Local storge.
 dB.setItem(noteKey,JSON.stringify(noteObj));
+
+Object.keys(dB).forEach((key)=>{
+  let todoNotes=JSON.parse(dB.getItem(key));
+  //console.log(todoNotes.title+", "+todoNotes. notBody);
+
+    let todoItem=document.createElement("div");
+  todoItem.classList.add("todoItem",`${todoNotes.noteColor}`);
+  let newnoteTitle=document.createElement("h3");
+  newnoteTitle.textContent=todoNotes.title;
+  todoItem.appendChild(newnoteTitle);
+  
+   let newEndDate=document.createElement("span");
+   newEndDate.classList.add("date");
+   newEndDate.textContent=todoNotes.eDate;
+   todoItem.appendChild(newEndDate);
+   let myNote=document.createElement("p");
+   myNote.textContent=todoNotes.notBody;
+   todoItem.appendChild(myNote);
+   let todoList=document.querySelector(".todo-list "); 
+   todoList.appendChild(todoItem);
+});
  document.querySelector("#noteTittle").value="";
 
   document.querySelector("#endDate").value="";
