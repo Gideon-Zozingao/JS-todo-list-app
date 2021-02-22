@@ -18,8 +18,7 @@ display.innerHTML="";
 let spanOne = document.querySelectorAll('.close')[0];
 // When the user clicks on <span> (x), close the modal
 spanOne.onclick = () =>{
-
- document.querySelector("#noteTittle").value="";
+  document.querySelector("#noteTittle").value="";
   document.querySelector("#endDate").value="";
   document.querySelector("#todoNote").value="";
   modal.style.display = "none";
@@ -30,18 +29,15 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
 let listItems=document.querySelectorAll(".todo-list li");
-
 let listItem=document.querySelector(".todo-list");
-
 let displayNote=document.querySelector(".noteDisplay");
 
 let addNote=document.querySelector("#addNote");
 addNote.onclick=()=>{
   let noteTitle=document.querySelector("#noteTittle").value;
-  
   let endDate=document.querySelector("#endDate").value;
-
   let todoNote=document.querySelector("#todoNote").value;
 
   if (noteTitle==""||todoNote==""||endDate==""){

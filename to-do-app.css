@@ -133,7 +133,6 @@ box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) ;
 .noteDisplay{
   border:none;
   height: auto; 
-  /* width:  */
 }
 .btn-1{
   border:none;
@@ -165,8 +164,7 @@ box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) ;
   border:none;
   
 }
-.todoItem{
-  
+.todoItem{ 
 height: auto;
 width: auto;
 padding: 15px;
@@ -175,49 +173,48 @@ margin-left: 10px;
 margin-right: 10px;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 margin-bottom: 4px;
-  
-  
-  padding: 5px;
-  background-color: white;
+padding: 5px;
+background-color: white;
 }
+
 .todoItem h3{
   font-weight:200;
 }
+
 .todoItem:hover{
 cursor: pointer;
 opacity: 90%;
 }
+
 .listUnstyled{
   list-style: none;
 }
+
 .inprogresItem{
 background-color: orange;
 }
+
 .completedItem{
 background-color: green;
 }
+
 .overdueItem{
 background-color: red;
 }
 
-
-
 .main::-webkit-scrollbar,.todo-list::-webkit-scrollbar {
   width: 10px;
 }
-
 
 .main::-webkit-scrollbar-track,.todo-list ::-webkit-scrollbar-track {
   background: #f1f1f1;
   width: 10px;
 }
 
-
 .main::-webkit-scrollbar-thumb,.todo-list::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 10px;
 }
-
 
 .main::-webkit-scrollbar-thumb:hover,.todo-list ::-webkit-scrollbar-thumb:hover{
   background: #555;
@@ -230,6 +227,7 @@ background-color: red;
   text-align: center;
   border-bottom: 1px solid purple;
 }
+
 .date{
   margin: 3px;
   border-radius: 2px;
@@ -237,6 +235,7 @@ background-color: red;
   font-weight: 100;
   color: yellow
 }
+
 .aler-warning{
   border-radius: 5px;
   border:1px solid red;
@@ -244,10 +243,10 @@ background-color: red;
   color: red;
   padding: 12px;
   width: 80%; 
-  /*align-items: center;*/
   margin: auto;
   z-index: 1;
 }
+
 .colorItem{
   height: 15px;
   width: 15px;
@@ -255,30 +254,29 @@ background-color: red;
   border: 2px solid white;
   margin: 10px;
 }
+
 .colorItem:hover{
 cursor: pointer;
 }
+
 .colorItem:active{
   border: 2px solid black;
 }
-.listInline{ 
 
-}
 .inline-list{
   display: flex;
 flex-direction: row;
 }
 
-
-.listUnstyled{}
-
 /*Color Classes*/
 .MediumPurple{
   background-color: #9370DB;
 }
+
 .PaleGoldenRod{
   background-color: #EEE8AA;
 }
+
 .PaleVioletRed{
   background-color: #DB7093;
 }
@@ -286,18 +284,23 @@ flex-direction: row;
 .PaleGreen{
   background-color: #98FB98;
 }
+
 .SeaGreen{
   background-color: #2E8B57;
 }
+
 .SandyBrown{
   background-color: #F4A460;
 }
+
 .SlateBlue{
   background-color: #6A5ACD;
 }
+
 .SkyBlue{
   background-color: #87CEEB;
 }
+
 .SpringGreen{
   background-color: #00FF7F;
 }
