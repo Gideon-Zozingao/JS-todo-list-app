@@ -7,6 +7,13 @@ let btnOne = document.getElementById("myBtn");
 btnOne.onclick = ()=> {
   modal.style.display = "block";
 }
+let clearBtn=document.querySelector("#myBtn-1");
+clearBtn.addEventListener("click",function(){
+  let storage=window.localStorage;
+ storage.clear();
+ let display=document.querySelector(".todo-list");
+display.innerHTML="";
+})
 // Get the <span> element that closes the modal
 let spanOne = document.querySelectorAll('.close')[0];
 // When the user clicks on <span> (x), close the modal
@@ -29,23 +36,6 @@ let listItem=document.querySelector(".todo-list");
 
 let displayNote=document.querySelector(".noteDisplay");
 
-//  let colorItem=document.querySelectorAll(".color-list li");
-colorPicked="";
-// for (let i=0; i<=colorItem.length; i++) {
-// colorItem[i].onclick=function(){
-//   colorItem[i].style.boder= '1px solid black';
-//   let modalContent=document.querySelector(".modal-content");
-//   colorPicked=modalContent.classList.add(colorItem[i].classList[1]);
-// };
-// }
-//alert()
-//
-// for (let i = 0;i<=listItems.length; i++) {
-//   listItems[i].onclick=function(){
-//   //alert(this.innerHTML);
-//   displayNote.innerHTML=this.innerHTML;
-// }
-// }
 let addNote=document.querySelector("#addNote");
 addNote.onclick=()=>{
   let noteTitle=document.querySelector("#noteTittle").value;
@@ -65,33 +55,23 @@ errMesage.remove();
 },1500);
 //modalHeaderText
   } else {
-
   // The data Object that is gonna Be Stored to the Local Storage.
-
-let noteObj={
-  title:noteTitle,
-  eDate:endDate,
-  notBody:todoNote,
-  noteColor:"SpringGreen"
-
-}
+  let noteObj={title:noteTitle,eDate:endDate,notBody:todoNote,noteColor:"SpringGreen"};
 // Seting the Ke of the Local Stirage data  to the Current date  and Time.
 let noteKey=new Date();
 //Decalring an Instance of the Local storage.
 let dB=window.localStorage;
 //sends the Data Item in JSON  format to the Local storge.
 dB.setItem(noteKey,JSON.stringify(noteObj));
-
 Object.keys(dB).forEach((key)=>{
+  
   let todoNotes=JSON.parse(dB.getItem(key));
-  //console.log(todoNotes.title+", "+todoNotes. notBody);
 
     let todoItem=document.createElement("div");
-  todoItem.classList.add("todoItem",`${todoNotes.noteColor}`);
+  todoItem.classList.add("todoItem");
   let newnoteTitle=document.createElement("h3");
   newnoteTitle.textContent=todoNotes.title;
   todoItem.appendChild(newnoteTitle);
-  
    let newEndDate=document.createElement("span");
    newEndDate.classList.add("date");
    newEndDate.textContent=todoNotes.eDate;
@@ -102,33 +82,9 @@ Object.keys(dB).forEach((key)=>{
    let todoList=document.querySelector(".todo-list "); 
    todoList.appendChild(todoItem);
 });
- document.querySelector("#noteTittle").value="";
 
+ document.querySelector("#noteTittle").value="";
   document.querySelector("#endDate").value="";
   document.querySelector("#todoNote").value="";
+}}
 
-  }
-  
-}
-
-let dB=window.localStorage;
-Object.keys(dB).forEach((key)=>{
-  let todoNotes=JSON.parse(dB.getItem(key));
-  //console.log(todoNotes.title+", "+todoNotes. notBody);
-
-    let todoItem=document.createElement("div");
-  todoItem.classList.add("todoItem",`${todoNotes.noteColor}`);
-  let newnoteTitle=document.createElement("h3");
-  newnoteTitle.textContent=todoNotes.title;
-  todoItem.appendChild(newnoteTitle);
-  
-   let newEndDate=document.createElement("span");
-   newEndDate.classList.add("date");
-   newEndDate.textContent=todoNotes.eDate;
-   todoItem.appendChild(newEndDate);
-   let myNote=document.createElement("p");
-   myNote.textContent=todoNotes.notBody;
-   todoItem.appendChild(myNote);
-   let todoList=document.querySelector(".todo-list "); 
-   todoList.appendChild(todoItem);
-});
