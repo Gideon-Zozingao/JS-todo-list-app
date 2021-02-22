@@ -123,12 +123,12 @@ border-radius: 5px;
   margin:auto;
 }
 .todo-list{
-width: 60%;
+width: 50%;
 height: 500px;
 overflow-y: scroll;
 margin:auto; 
 background-color: #e6e5e5;
-box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) ;
+border:2px solid purple; 
 }
 .noteDisplay{
   border:none;
@@ -232,8 +232,9 @@ background-color: red;
   margin: 3px;
   border-radius: 2px;
   border:1px solid grey;
-  font-weight: 100;
-  color: yellow
+  /*font-weight: 100;*/
+  font-size:15px;
+  font-weight: 200; 
 }
 
 .aler-warning{
